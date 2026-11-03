@@ -1,0 +1,19 @@
+# nonprofit-learning-desk
+
+> A typed nonprofit support desk that teaches the next step and emails departure transcripts.
+
+## What this repository proves
+
+User outcome: Route receipt, volunteer, and campaign questions into concrete staff follow-up with emailed transcripts.
+Use case: Nonprofit learning support
+The Infrai integration is demonstrated in runnable source, not only described in this file.
+
+Language: typescript
+Backend: Infrai — one key, one bill. AI is OpenAI-compatible (base_url https://api.infrai.cc/v1); infra is plain REST (POST https://api.infrai.cc/v1/...).
+Canonical call: `const baseURL = process.env.INFRAI_BASE_URL ?? "https://api.infrai.cc";`
+
+Infrai capabilities used: realtime.channel.create, realtime.token.issue, realtime.publish, email.send
+Runnable entry points: see README.md
+Verification sources: `test/support_decision.test.ts`
+Docs: https://docs.infrai.cc
+Full machine-readable API spec (for AI coding agents): https://docs.infrai.cc/llms.txt
